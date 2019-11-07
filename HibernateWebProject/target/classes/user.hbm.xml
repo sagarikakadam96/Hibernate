@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  <!-- root element in the mapping file that contains all the mapping elements -->
+
+	<class name="com.lti.User" table="u400"> <!-- specifies the Persistent class -->
+
+		<id name="id"> <!-- specifies the primary key attribute in the class -->
+			<generator class="increment"></generator> <!--used to generate the primary key -->
+		</id>
+
+		<property name="name"></property> <!-- specifies the property name of the Persistent class -->
+		<property name="password"></property>
+		<property name="email"></property>
+
+	</class>
+
+</hibernate-mapping>

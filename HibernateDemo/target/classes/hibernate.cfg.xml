@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!-- The configuration file contains information about the database and mapping file. Conventionally, its name should be hibernate.cfg.xml. used to create the table in the database automatically -->
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> <!-- DB Independent: Dialect: will convert datatype to required format(according to oracle or mysql or whatever that is specified) while mapping-->
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="connection.username">sava2</property> <!-- adv: no try catch -->
+		<property name="connection.password">sava</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		
+		<property name="show_sql">true</property>
+		<mapping resource="employee.hbm.xml"/>
+	</session-factory>
+
+</hibernate-configuration> 
